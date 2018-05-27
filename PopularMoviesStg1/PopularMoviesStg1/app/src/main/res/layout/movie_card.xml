@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/cardview_default_radius"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_dark">
+
+            <ImageView
+                android:id="@+id/Thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/movCover_height"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Thumbnail"
+                android:paddingLeft="@dimen/movTitle_padding"
+                android:paddingRight="@dimen/movTitle_padding"
+                android:paddingTop="@dimen/movTitle_padding"
+                android:textColor="@color/BkGrd"
+                android:textSize="@dimen/movTitle" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/title"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/star"
+                android:paddingBottom="@dimen/userRating_PadBottom"
+                android:paddingLeft="@dimen/movTitle_padding" />
+
+            <TextView
+                android:id="@+id/userrating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/title"
+                android:paddingBottom="@dimen/userRating_PadBottom"
+                android:paddingLeft="40dp"
+                android:paddingRight="@dimen/movTitle_padding"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/userRating" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

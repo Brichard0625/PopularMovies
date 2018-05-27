@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0027ff</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="BkGrd">#FFF</color>
+    <color name="Movie_Title">#69F0AE</color>
+    <color name="Label_Color">#00ff44</color>
+    <color name="Hot_Rating">#ff0000</color>
+    <color name="Warm_Rating">#FFA500</color>
+    <color name="Cold_Rating">#0000FF</color>
+
+
+</resources>

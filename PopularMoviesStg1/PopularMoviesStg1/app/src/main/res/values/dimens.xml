@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="movTitle_padding">5dp</dimen>
+    <dimen name="movTitle">12sp</dimen>
+    <dimen name="movCover_height">160dp</dimen>
+    <dimen name="movCard_margin">5dp</dimen>
+    <dimen name="userRating_PadBottom">5dp</dimen>
+    <dimen name="userRating">12sp</dimen>
+    <dimen name="detailBkgrd_height">500dp</dimen>
+    <dimen name="layout_margLeft">10dp</dimen>
+    <dimen name="layout_margTop">3dp</dimen>
+    <dimen name="layout_margTop2">10dp</dimen>
+    <dimen name="paddingLayout">10dp</dimen>
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">PopularMoviesStg1</string>
+    <string name="actionSettings">Settings</string>
+    <string name="movieName">Movie Title</string>
+    <string name="moviePlot">Movie Details</string>
+    <string name="rating">Rating</string>
+    <string name="release">Release Date</string>
+    <string name="prefSortOrderLabel">Sort Order</string>
+    <string name="prefSortOrderKey">sortOrder</string>
+    <string name="prefMostPopular">Most Popular</string>
+    <string name="prefHighestRated">Highest Rated</string>
+    <string name="trailer">Trailer</string>
+    <string name="movie_reviewer">Reviewers Name</string>
+    <string name="Review_content">Reviewers Comment</string>
+    <string name="Plot_label">Plot</string>
+    <string name="Release_label">Release Date</string>
+    <string name="Review_label">Reviews</string>
+    <string name="Favorite">Favorite Movies</string>
+
+</resources>
