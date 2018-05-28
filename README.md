@@ -1,2 +1,2 @@
 # PopularMovies
-Please Enter your API in the Gradle.properties.
+Please Enter your API KEY in the Gradle.properties.
