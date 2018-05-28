@@ -110,7 +110,6 @@ public class DetailActivity extends AppCompatActivity {
         MaterialFavoriteButton materialFavoriteButtonNice =
                 (MaterialFavoriteButton) findViewById(R.id.fav_button);
 
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         //Saves favorite movie once button is clicked and displays message.
         materialFavoriteButtonNice.setOnFavoriteChangeListener(
