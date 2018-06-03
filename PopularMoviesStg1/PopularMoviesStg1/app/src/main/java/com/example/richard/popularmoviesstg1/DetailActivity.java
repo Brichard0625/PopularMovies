@@ -74,14 +74,15 @@ public class DetailActivity extends AppCompatActivity {
             String rating = getIntent().getExtras().getString("vote_average");
             String release = getIntent().getExtras().getString("release_date");
 
-        //String poster = "https://image.tmdb.org/t/p/w500" + thumbnail;
+          //Sets image URL to poster_path.
+          String poster = "https://image.tmdb.org/t/p/w300" + thumbnail;
 
 
 
 
         //Applies the Glide image loader/caching for thumbnail.
             Glide.with(this)
-                    .load(thumbnail)
+                    .load(poster)
                     .placeholder(R.drawable.ic_launcher_background)
                     .into(imageView);
 
@@ -111,7 +112,7 @@ public class DetailActivity extends AppCompatActivity {
                 (MaterialFavoriteButton) findViewById(R.id.fav_button);
 
 
-        //Saves favorite movie once button is clicked and displays message.
+        //Saves favorite movie once button is clicked and displays toast message.
         materialFavoriteButtonNice.setOnFavoriteChangeListener(
                 new MaterialFavoriteButton.OnFavoriteChangeListener(){
                     @Override
@@ -121,7 +122,7 @@ public class DetailActivity extends AppCompatActivity {
                             editor.putBoolean("Favorite Added", true);
                             editor.commit();
                             saveFavorite();
-                            Snackbar.make(buttonView, "Added to Favorite",
+                            Snackbar.make(buttonView, "MOVIE HAS BEEN ADDED TO FAVORITES",
                                     Snackbar.LENGTH_SHORT).show();
                         }
                         //Deletes the saved moved and displays message.
@@ -132,7 +133,7 @@ public class DetailActivity extends AppCompatActivity {
                             SharedPreferences.Editor editor = getSharedPreferences("com.example.richard.popularmoviesstg1", MODE_PRIVATE).edit();
                             editor.putBoolean("Favorite Removed", true);
                             editor.commit();
-                            Snackbar.make(buttonView, "Removed from Favorite",
+                            Snackbar.make(buttonView, "MOVIE HAD BEEN DELETED FROM FAVORITES",
                                     Snackbar.LENGTH_SHORT).show();
                         }
 
@@ -230,7 +231,7 @@ public class DetailActivity extends AppCompatActivity {
                 @Override
                 public void onFailure(Call<TrailerDataResponse> call, Throwable t) {
                     Log.d("Error", t.getMessage());
-                    Toast.makeText(DetailActivity.this, "Error fetching trailer data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DetailActivity.this, "Error fetching trailer data, CHECK INTERNET CONNECTION", Toast.LENGTH_SHORT).show();
 
                 }
             });
@@ -255,15 +256,16 @@ public class DetailActivity extends AppCompatActivity {
             call.enqueue(new Callback<MovieReviews>() {
                 @Override
                 public void onResponse(Call<MovieReviews> call, Response<MovieReviews> response) {
-                    List<MovieReviews> movieReviewsList = response.body().getresults();
+                List<MovieReviews> movieReviewsList = response.body().getresults();
                     recyclerView1.setAdapter(new MovieReviewAdapter(getApplicationContext(), movieReviewsList));
                     recyclerView1.smoothScrollToPosition(0);
+
                 }
 
                 @Override
                 public void onFailure(Call<MovieReviews> call, Throwable t) {
                     Log.d("Error", t.getMessage());
-                    Toast.makeText(DetailActivity.this, "Error fetching trailer data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DetailActivity.this, "Error fetching trailer data, CHECK INTERNET CONNECTION" , Toast.LENGTH_SHORT).show();
 
                 }
             });
@@ -274,7 +276,7 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-    //Saves Favorite movies data
+    //Saves data needed for favorite movies.
     public void saveFavorite(){
         favoriteMovieHelper = new FavoriteMovieHelper(activity);
         favoriteMov= new Movie();
@@ -285,8 +287,9 @@ public class DetailActivity extends AppCompatActivity {
         String rating = getIntent().getExtras().getString("vote_average");
         favoriteMov.setVoteAverage(Double.parseDouble(rating));
 
-        String Poster = getIntent().getExtras().getString("poster_path");
-        favoriteMov.setPosterPath(Poster);
+       String Poster = getIntent().getExtras().getString("poster_path");
+       favoriteMov.setPosterPath(Poster);
+
 
         favoriteMov.setOriginalTitle(nameOfMovie.getText().toString().trim());
         favoriteMov.setReleaseDate(ReleaseDate.getText().toString().trim());
@@ -301,6 +304,4 @@ public class DetailActivity extends AppCompatActivity {
 
 
 }
-
-
 
