@@ -6,24 +6,14 @@
     android:background="@android:color/background_dark">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Reviewers Name:"
-        android:textColor="@color/Label_Color"
-        android:textSize="20sp" />
-
-    <TextView
         android:id="@+id/ReviewersName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
+        android:padding="@dimen/paddingLayout"
         android:text="@string/movie_reviewer"
         android:textColor="@android:color/background_light"
-        android:textSize="15sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/ReviewersComment"
@@ -39,7 +29,7 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/Movie_Title"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:background="#cca000" />
 
 </RelativeLayout>
