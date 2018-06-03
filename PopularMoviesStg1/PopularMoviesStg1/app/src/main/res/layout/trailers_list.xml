@@ -2,42 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@android:color/background_dark">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/Thumbnail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/layout_margLeft"
+            android:gravity="center"
+            android:src="@drawable/youtube" />
 
-            <ImageView
-                android:id="@+id/Thumbnail"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="@dimen/layout_margLeft"
-                android:gravity="center"
-                android:src="@drawable/youtube" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/Thumbnail"
+            android:layout_toRightOf="@+id/Thumbnail"
+            android:paddingLeft="@dimen/movTitle_padding"
+            android:paddingRight="@dimen/movTitle_padding"
+            android:paddingTop="@dimen/movTitle_padding"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/Thumbnail"
-                android:layout_toRightOf="@+id/Thumbnail"
-                android:paddingLeft="@dimen/movTitle_padding"
-                android:paddingRight="@dimen/movTitle_padding"
-                android:paddingTop="@dimen/movTitle_padding"
-                android:textColor="@color/Movie_Title"
-                android:textSize="15sp" />
-
-        </RelativeLayout>
-
+    </RelativeLayout>
 
 
 </LinearLayout>
