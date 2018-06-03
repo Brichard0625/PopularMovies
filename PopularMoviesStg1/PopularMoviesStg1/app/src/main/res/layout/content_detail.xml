@@ -12,10 +12,10 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/starbkgrd">
+        android:background="@android:color/background_dark">
 
 
         <LinearLayout
@@ -25,28 +25,41 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/paddingLayout"
+                android:text="@string/movieName"
+                android:textAlignment="center"
+                android:textColor="@color/BkGrd"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="50dp"
+                android:background="#FFD700">
 
                 <com.github.ivbaranov.mfb.MaterialFavoriteButton
                     android:id="@+id/fav_button"
                     android:layout_width="30dp"
-                    android:layout_height="30dp" />
+                    android:layout_height="30dp"
+                    app:mfb_color="white" />
 
                 <TextView
                     android:id="@+id/rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_toEndOf="@+id/fav_button"
                     android:layout_toRightOf="@id/fav_button"
                     android:padding="@dimen/movTitle_padding"
                     android:text="@string/rating"
                     android:textAlignment="center"
                     android:textColor="@color/Label_Color"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -54,12 +67,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
                     android:layout_toLeftOf="@id/release"
                     android:layout_toStartOf="@+id/release"
                     android:padding="@dimen/movTitle_padding"
                     android:text="@string/Release_label"
-                    android:textColor="@color/Label_Color"
-                    android:textSize="12sp"
+                    android:textColor="@color/BkGrd"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -69,40 +83,20 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
+                    android:layout_marginTop="12dp"
                     android:padding="@dimen/movTitle_padding"
                     android:text="@string/release"
                     android:textAlignment="center"
-                    android:textColor="@color/BkGrd"
+                    android:textColor="@color/Hot_Rating"
                     android:textSize="12sp" />
             </RelativeLayout>
 
 
             <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/paddingLayout"
-                android:text="@string/movieName"
-                android:textAlignment="center"
-                android:textColor="@color/BkGrd"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/plotLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/movTitle_padding"
-                android:text="@string/Plot_label"
-                android:textAlignment="center"
-                android:textColor="@color/Label_Color"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
                 android:id="@+id/movieDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:padding="@dimen/movTitle_padding"
                 android:text="@string/moviePlot"
                 android:textAlignment="center"
@@ -114,7 +108,7 @@
                 android:id="@+id/recycler_view1"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@drawable/starbkgrd"
+                android:layout_marginTop="10dp"
                 android:paddingBottom="5dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
@@ -122,10 +116,13 @@
                 android:scrollbars="vertical" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFD700"
+                android:gravity="center"
                 android:text="@string/Review_label"
-                android:textColor="@color/Label_Color"
+                android:textColor="@color/BkGrd"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -133,6 +130,7 @@
                 android:id="@+id/recycler_view2"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:clickable="false"
                 android:padding="5dp"
                 android:scrollbars="vertical" />
 
